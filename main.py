@@ -49,8 +49,11 @@ button[data-testid="stBaseButton-headerNoPadding"]::before {
 st.markdown(custom_css, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.title('tools')
-    st.write("<>hhjg")
+    st.title('How to play')
+    st.write("- Every game has a different fruit secret")
+    st.write("- Crack the Code")
+    st.write("- Note your Attemot Count")
+    st.write("- Share with Friends!")
 
 
 
