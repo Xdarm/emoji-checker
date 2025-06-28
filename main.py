@@ -11,7 +11,7 @@ urls=["",""]
 page_bg_color = """
 <style>
 .stApp{
-    background-color: #4d8f6c;
+    background-color: #3539A4;
     background-size: cover;
 }
 </style>
@@ -23,7 +23,7 @@ custom_css = """
 <style>
 
 div[data-baseweb="select"] > div {
-    background-color: chartreuse;
+    background-color: pink;
 }
 /* Hide original SVG paths in the toggle button */
 button[data-testid="stBaseButton-headerNoPadding"] svg path {
@@ -69,7 +69,7 @@ if "secret_code" not in st.session_state or st.button("🔁 New Game"):
     st.session_state.attempts_count = 0
     st.session_state.game_over = False
 
-st.title("🎯 :violet[Emoji Code] :blue[Breaker]")
+st.title("🎯 :blue[Emoji Code] :blue[Breaker]")
 st.markdown("Guess the secret 3-emoji code!")
 
 
@@ -124,7 +124,7 @@ for attempt, result in st.session_state.attempts:
     showText+= "→"
     for emoji in result:
         showText += emoji+" "
-    st.badge(showText, color="orange", icon=":material/person_play:")
+    st.badge(f'{showText}', color="orange", icon=":material/person_play:")
 
 # Check win
 if any(result == ["✅", "✅", "✅"] for _, result in st.session_state.attempts):
